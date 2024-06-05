@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Compras</title>  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="perfil">
+            <div id="fecha"></div>
+            <h1>Hola, Nicolas Rios</h1>
+            <span>Realiza tus compras de la mejor manera</span>
+        </div>
+    
+        <div class="agregar-tarea">
+            <input type="text" id="input" placeholder="agregar una compra">
+            <i id="boton-enter" class="fas fa-plus-circle"></i>
+        </div>
+    
+        <div class="seccion-tarea">
+            <h3>Tus compras: </h3>
+            <ul id="lista">
+                <!-- Las compras se agregarán aquí dinámicamente -->
+            </ul>
+        </div>   
+    </div>
+    
+    <!-- Contenedor negro para modal -->
+    <div id="modal-container" class="modal-container">
+        <!-- Modal para ingresar la compra -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span id="close" class="close">&times;</span>
+                <h2>Ingresa los detalles de la compra</h2>
+                <input type="text" id="productoInput" placeholder="Producto">
+                <input type="number" id="cantidadInput" placeholder="Cantidad">
+                <select id="lugarInput">
+                    <option value="jumbo">Jumbo</option>
+                    <option value="olimpica">Olimpica</option>
+                </select>
+                <button id="agregarCompra">Agregar Compra</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
